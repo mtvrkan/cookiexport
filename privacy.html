@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — CookieXport</title>
+<meta name="description" content="CookieXport privacy policy — 100% local processing, zero data collection, zero telemetry.">
+<link rel="canonical" href="https://mtvrkan.github.io/cookiexport/privacy.html">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/icon32.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .doc { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+  .doc h1 { margin-bottom: 4px; }
+  .doc .meta { color: var(--text-3); font-size: 0.875rem; margin-bottom: 32px; }
+  .doc .callout {
+    background: var(--surface); border: 1px solid var(--border-sub);
+    border-radius: var(--r-lg); padding: 20px 24px; margin-bottom: 40px;
+    color: var(--text-2); font-size: 0.9375rem;
+  }
+  .doc h2 { font-size: 1.25rem; margin-top: 40px; margin-bottom: 12px; }
+  .doc p, .doc li { color: var(--text-2); font-size: 0.9375rem; line-height: 1.7; }
+  .doc ul { padding-left: 20px; }
+  .doc li { margin-bottom: 8px; }
+  .doc code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+  .doc hr { border: none; border-top: 1px solid var(--border-sub); margin: 48px 0 24px; }
+  .doc .fine-print { color: var(--text-3); font-size: 0.8125rem; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent-h); font-size: 0.9375rem; margin-bottom: 24px; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" fill="#C4A06A"/>
+        <circle cx="8.5" cy="9" r="1.6" fill="#6B3F1A"/>
+        <circle cx="14.5" cy="7.5" r="1.3" fill="#6B3F1A"/>
+        <circle cx="11" cy="14.5" r="1.5" fill="#6B3F1A"/>
+      </svg>
+      CookieXport
+    </a>
+  </div>
+</header>
+
+<main class="doc">
+  <a class="back-link" href="index.html">← Back to CookieXport</a>
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective date: June 29, 2025 · Version 1.0.0</p>
+
+  <div class="callout">
+    <strong>Short version:</strong> CookieXport operates entirely on your device. It never sends any of your data, cookies, or browsing information to any external server. Everything stays local.
+  </div>
+
+  <h2>1. What is CookieXport?</h2>
+  <p>CookieXport is a browser extension for Google Chrome and Chromium-based browsers. It allows you to read, filter, and export browser cookies stored on your device in multiple formats (cURL, Python, Node.js, Netscape, JSON, and more) for development, automation, and testing purposes.</p>
+
+  <h2>2. Permissions Used</h2>
+  <p>CookieXport requests the following browser permissions. Each is required for core functionality and nothing else.</p>
+  <ul>
+    <li><code>cookies</code> — To read cookies stored in your browser for the sites you choose to export. Without this permission the extension cannot function.</li>
+    <li><code>tabs</code> — To detect the domain of the currently active tab so cookies can be pre-filtered for that site automatically.</li>
+    <li><code>downloads</code> — To save exported cookie files (e.g. <code>cookies_youtube.txt</code>) to your local Downloads folder.</li>
+    <li><code>storage</code> — To remember your preferences (theme, language, export format, export history) locally in your browser. No cloud sync occurs.</li>
+    <li><code>clipboardWrite</code> — To copy formatted cookie output to your clipboard when you press the Copy button.</li>
+    <li><code>contextMenus</code> — To add a right-click menu item ("Export cookies for this site") for quick access on any page.</li>
+    <li><code>host_permissions: &lt;all_urls&gt;</code> — The cookies API requires host access to read cookies for any domain. This does not mean the extension reads or transmits page content — it only accesses cookie data when you explicitly trigger an export.</li>
+  </ul>
+
+  <h2>3. Data Collection &amp; Storage</h2>
+  <p>We collect nothing. CookieXport does not collect, transmit, or store any personal data on external servers. Specifically:</p>
+  <ul>
+    <li>Cookie data you export stays on your device only — it is never sent anywhere by the extension.</li>
+    <li>Your export history is stored in <code>chrome.storage.local</code> on your device and is never synced to any server.</li>
+    <li>Your preferences (language, theme, format) are stored locally and never leave your browser.</li>
+    <li>The extension makes zero network requests of its own.</li>
+  </ul>
+  <p>You can verify this yourself: open Chrome DevTools → Network tab while using CookieXport. You will see zero outgoing requests from the extension.</p>
+
+  <h2>4. Cookie Data Handling</h2>
+  <p>CookieXport reads browser cookies strictly on demand — only when you click Export, Copy, or use the right-click menu. The extension:</p>
+  <ul>
+    <li>Does <strong>not</strong> passively monitor or log your browsing activity.</li>
+    <li>Does <strong>not</strong> read cookies in the background or on page load.</li>
+    <li>Does <strong>not</strong> modify cookies in your browser (except when using the Import feature at your explicit request).</li>
+    <li>Only accesses cookies for the domain you select in the export interface.</li>
+  </ul>
+
+  <h2>5. Import Feature</h2>
+  <p>The optional Import tab allows you to load a <code>cookies.txt</code> or <code>.json</code> file from your local device and apply those cookies to your browser. This action:</p>
+  <ul>
+    <li>Is entirely user-initiated — you must manually select a file and press "Apply to browser".</li>
+    <li>Reads the file locally; the file contents are never transmitted externally.</li>
+    <li>Uses the standard <code>chrome.cookies.set()</code> API to write cookies.</li>
+  </ul>
+
+  <h2>6. Third-Party Services</h2>
+  <p>CookieXport does not integrate with, connect to, or share data with any third-party service, analytics platform, or advertising network. No trackers.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>CookieXport is a developer tool intended for users aged 13 and above. It does not knowingly collect data from children.</p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>If this privacy policy changes, the updated version will be published at the same URL. The extension version number in the policy header will be incremented accordingly.</p>
+
+  <h2>9. Contact</h2>
+  <p>If you have questions about this privacy policy or the extension's data practices, please <a href="https://github.com/mtvrkan/cookiexport/issues" style="color:var(--accent-h);" target="_blank" rel="noopener">open an issue on GitHub</a> or contact the developer directly via the <a href="https://chromewebstore.google.com/detail/cookiexport/elehbdibaiglkdbcaolaehdpobghehbm" style="color:var(--accent-h);" target="_blank" rel="noopener">Chrome Web Store listing</a>.</p>
+
+  <hr>
+
+  <p class="fine-print">
+    CookieXport v1.0.0 · This extension is an independent developer tool and is not affiliated with Google LLC.<br><br>
+    Third-party names referenced in this extension are trademarks of their respective owners: Python® is a trademark of the Python Software Foundation. Node.js® is a trademark of the OpenJS Foundation. PHP is a trademark of the PHP Group. Go is a trademark of Google LLC. Playwright is a trademark of Microsoft Corporation. Puppeteer is a product of Google LLC. Selenium is a trademark of the Software Freedom Conservancy. YouTube™ is a trademark of Google LLC. All other product names, logos, and brands are property of their respective owners. Use of these names in CookieXport is for descriptive identification purposes only and does not imply endorsement.
+  </p>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CookieXport — Export Browser Cookies in 13 Formats for Chrome</title>
+<meta name="description" content="CookieXport is the most powerful cookie exporter for Chrome. Export cookies as Netscape, JSON, cURL, Python, Node.js, Playwright, Puppeteer & more. 100% local, zero telemetry.">
+<link rel="canonical" href="https://mtvrkan.github.io/cookiexport/">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/icon32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/icon16.png">
+<link rel="apple-touch-icon" href="assets/img/icons/icon128.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="CookieXport — Export Browser Cookies in 13 Formats">
+<meta property="og:description" content="Netscape, JSON, cURL, Python, Node.js, Playwright, Puppeteer & more. 100% local, zero telemetry.">
+<meta property="og:image" content="https://mtvrkan.github.io/cookiexport/assets/img/og-image.png">
+<meta property="og:url" content="https://mtvrkan.github.io/cookiexport/">
+<meta property="og:site_name" content="CookieXport">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CookieXport — Export Browser Cookies in 13 Formats">
+<meta name="twitter:description" content="Netscape, JSON, cURL, Python, Node.js, Playwright, Puppeteer & more. 100% local, zero telemetry.">
+<meta name="twitter:image" content="https://mtvrkan.github.io/cookiexport/assets/img/og-image.png">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "CookieXport",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome",
+  "description": "Export browser cookies in 13 formats: Netscape, JSON, cURL, Python, Node.js, Playwright, Puppeteer & more.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "url": "https://chromewebstore.google.com/detail/cookiexport/elehbdibaiglkdbcaolaehdpobghehbm"
+}
+</script>
+</head>
+<body>
+
+<a href="#main" class="sr-only" style="position:absolute;left:-9999px;">Skip to content</a>
+
+<!-- ═══════════════════════════════ NAV ═══ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" aria-label="CookieXport home">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" fill="#C4A06A"/>
+        <circle cx="8.5" cy="9"    r="1.6" fill="#6B3F1A"/>
+        <circle cx="14.5" cy="7.5" r="1.3" fill="#6B3F1A"/>
+        <circle cx="11"  cy="14.5" r="1.5" fill="#6B3F1A"/>
+        <circle cx="16"  cy="13.5" r="1.2" fill="#6B3F1A"/>
+        <circle cx="7.5" cy="14.5" r="1.1" fill="#6B3F1A"/>
+        <circle cx="13"  cy="10.5" r="0.9" fill="#6B3F1A"/>
+      </svg>
+      CookieXport
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#formats">Formats</a>
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#privacy">Privacy</a>
+      <a href="https://github.com/mtvrkan/cookiexport" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="https://chromewebstore.google.com/detail/cookiexport/elehbdibaiglkdbcaolaehdpobghehbm" target="_blank" rel="noopener">Add to Chrome</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="nav-toggle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ═══════════════════════════════ HERO ═══ -->
+  <section class="hero" id="top">
+    <div class="container">
+      <span class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Free on the Chrome Web Store
+      </span>
+      <h1>Export browser cookies in <span style="color:var(--accent-h)">13 formats</span>, instantly</h1>
+      <p class="lead">CookieXport gives developers, automation engineers, and security researchers full control over browser cookies — Netscape, JSON, cURL, Python, Playwright, Puppeteer and more. No servers, no telemetry, no nonsense.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/cookiexport/elehbdibaiglkdbcaolaehdpobghehbm" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Zm0 4a6 6 0 0 1 5.29 3.17l-3.31 5.73A2.99 2.99 0 0 0 12 9a3 3 0 0 0-2.6 1.5L5.4 7.34A6 6 0 0 1 12 6Zm-6 6a6 6 0 0 1 .4-2.14l3.62 6.27A6 6 0 0 1 6 12Zm6 6a6 6 0 0 1-3-.8l3.6-6.24.03.04a3 3 0 0 0 2.4 1.2 2.94 2.94 0 0 0 .7-.08l-3.7 6.4a5.8 5.8 0 0 1-.03.48Zm5.6-2.5-3.32-5.75A2.99 2.99 0 0 0 15 9h6.9A6 6 0 0 1 11.6 15.5Z"/></svg>
+          Add to Chrome — It's Free
+        </a>
+        <a class="btn btn-secondary btn-lg" href="https://github.com/mtvrkan/cookiexport" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+      <p class="hero-meta">100% local · No account required · Works on any site</p>
+      <p class="hero-browsers">Also installs on Brave, Edge, Opera, Vivaldi & other Chromium-based browsers</p>
+
+      <div class="hero-shot reveal">
+        <div class="hero-shot-frame">
+          <div class="frame-bar"><span></span><span></span><span></span></div>
+          <img src="assets/img/screenshots/hero.png" width="920" height="1108" alt="CookieXport popup showing the Export tab with cookies for github.com and a cURL preview ready to copy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ TRUST BAR ═══ -->
+  <div class="trust-bar">
+    <div class="container">
+      <span class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        100% local processing
+      </span>
+      <span class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 3 6v6c0 5 3.8 8.9 9 10 5.2-1.1 9-5 9-10V6l-9-4Z"/></svg>
+        Zero telemetry
+      </span>
+      <span class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="4.9" y1="4.9" x2="19.1" y2="19.1"/></svg>
+        No external network requests
+      </span>
+      <span class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+        10 languages supported
+      </span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ FORMATS ═══ -->
+  <section id="formats">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Export formats</span>
+        <h2>One click, 13 ready-to-use formats</h2>
+        <p>Pick the format that fits your workflow — from a plain Netscape cookie jar to a fully-formed Playwright script.</p>
+      </div>
+
+      <div class="format-grid reveal">
+        <div class="format-card"><div class="format-name">Netscape <span class="format-tag">.txt</span></div><p>Compatible with wget, curl and most CLI download tools.</p></div>
+        <div class="format-card"><div class="format-name">JSON <span class="format-tag">.json</span></div><p>Structured data with full cookie metadata.</p></div>
+        <div class="format-card"><div class="format-name">cURL <span class="format-tag">shell</span></div><p>Ready-to-paste command with a Cookie header.</p></div>
+        <div class="format-card"><div class="format-name">Python requests <span class="format-tag">.py</span></div><p>Complete script with session setup.</p></div>
+        <div class="format-card"><div class="format-name">Node.js fetch <span class="format-tag">.js</span></div><p>Async-ready snippet for modern Node.</p></div>
+        <div class="format-card"><div class="format-name">Playwright <span class="format-tag">.js</span></div><p><code>addCookies()</code>-ready array.</p></div>
+        <div class="format-card"><div class="format-name">Puppeteer <span class="format-tag">.js</span></div><p><code>setCookie()</code>-ready array.</p></div>
+        <div class="format-card"><div class="format-name">Selenium <span class="format-tag">.py</span></div><p><code>add_cookie()</code> driver calls.</p></div>
+        <div class="format-card"><div class="format-name">PHP cURL <span class="format-tag">.php</span></div><p><code>curl_setopt</code> with a cookie string.</p></div>
+        <div class="format-card"><div class="format-name">Go net/http <span class="format-tag">.go</span></div><p><code>req.AddCookie()</code> calls.</p></div>
+        <div class="format-card"><div class="format-name">HAR <span class="format-tag">.har</span></div><p>Standard HTTP Archive format.</p></div>
+        <div class="format-card"><div class="format-name">Base64 <span class="format-tag">encoded</span></div><p>Encoded for safe transport.</p></div>
+        <div class="format-card"><div class="format-name">Custom template <span class="format-tag">any</span></div><p>Your own format using <code>{{name}}</code>, <code>{{value}}</code> variables.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CODE PREVIEW ═══ -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">See it in action</span>
+        <h2>Copy exactly what you need</h2>
+        <p>Every export is generated instantly in your browser — pick a tab to preview the output.</p>
+      </div>
+
+      <div class="code-preview reveal">
+        <div class="code-preview-head">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <div class="code-preview-tabs" role="tablist" aria-label="Export format preview">
+            <button class="code-tab active" data-tab="curl" role="tab" aria-selected="true">cURL</button>
+            <button class="code-tab" data-tab="python" role="tab" aria-selected="false">Python</button>
+            <button class="code-tab" data-tab="playwright" role="tab" aria-selected="false">Playwright</button>
+            <button class="code-tab" data-tab="json" role="tab" aria-selected="false">JSON</button>
+          </div>
+          <button class="copy-btn" id="copy-code" type="button">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy
+          </button>
+        </div>
+
+        <div class="code-panel active" data-panel="curl">
+<pre><code>curl <span class="tok-str">'https://example.com/api'</span> \
+  -H <span class="tok-key">'Cookie:</span> <span class="tok-str">session_id=a1b2c3; theme=dark; auth_token=xyz789</span><span class="tok-key">'</span></code></pre>
+        </div>
+        <div class="code-panel" data-panel="python">
+<pre><code><span class="tok-key">import</span> requests
+
+session = requests.Session()
+session.cookies.update({
+    <span class="tok-str">"session_id"</span>: <span class="tok-str">"a1b2c3"</span>,
+    <span class="tok-str">"theme"</span>: <span class="tok-str">"dark"</span>,
+    <span class="tok-str">"auth_token"</span>: <span class="tok-str">"xyz789"</span>,
+})
+response = session.<span class="tok-fn">get</span>(<span class="tok-str">"https://example.com/api"</span>)</code></pre>
+        </div>
+        <div class="code-panel" data-panel="playwright">
+<pre><code><span class="tok-key">await</span> context.<span class="tok-fn">addCookies</span>([
+  { name: <span class="tok-str">"session_id"</span>, value: <span class="tok-str">"a1b2c3"</span>, domain: <span class="tok-str">".example.com"</span>, path: <span class="tok-str">"/"</span> },
+  { name: <span class="tok-str">"theme"</span>,      value: <span class="tok-str">"dark"</span>,   domain: <span class="tok-str">".example.com"</span>, path: <span class="tok-str">"/"</span> }
+]);</code></pre>
+        </div>
+        <div class="code-panel" data-panel="json">
+<pre><code>[
+  {
+    <span class="tok-key">"name"</span>: <span class="tok-str">"session_id"</span>,
+    <span class="tok-key">"value"</span>: <span class="tok-str">"a1b2c3"</span>,
+    <span class="tok-key">"domain"</span>: <span class="tok-str">".example.com"</span>,
+    <span class="tok-key">"secure"</span>: <span class="tok-key">true</span>,
+    <span class="tok-key">"httpOnly"</span>: <span class="tok-key">true</span>
+  }
+]</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FEATURES ═══ -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Features</span>
+        <h2>Built for developers who live in DevTools</h2>
+        <p>Every feature is designed to save you a trip to the terminal.</p>
+      </div>
+
+      <div class="features-grid reveal">
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <h3>Instant domain detection</h3>
+          <p>Automatically reads the active tab's domain — no copy-pasting URLs.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <h3>Quick presets</h3>
+          <p>YouTube, Netflix, Twitter, GitHub, Discord & 17 more, one click away.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3Z"/></svg></div>
+          <h3>Smart filters</h3>
+          <p>Filter by Secure, HttpOnly, Session, or cookies expiring soon.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <h3>Full-text search</h3>
+          <p>Search across cookie names and values in real time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <h3>Multi-domain export</h3>
+          <p>Select and export cookies from multiple domains at once.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v5h5"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/></svg></div>
+          <h3>Export history</h3>
+          <p>Every export is saved locally — re-download or copy it anytime.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+          <h3>Import cookies</h3>
+          <p>Load cookies back in from a <code>.txt</code> or <code>.json</code> file.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
+          <h3>Light & dark theme</h3>
+          <p>Auto-detects your system theme, or switch manually.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg></div>
+          <h3>10 languages</h3>
+          <p>Full UI translations, including Turkish, German, French, Japanese & more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SCREENSHOTS ═══ -->
+  <section id="screenshots">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Take a look</span>
+        <h2>A clean, focused interface</h2>
+        <p>No clutter — just the tools you need, right in the toolbar.</p>
+      </div>
+
+      <div class="shots-grid reveal">
+        <figure class="shot-card">
+          <div class="shot-img-wrap">
+            <img src="assets/img/screenshots/popup-export.png" width="920" height="1108" loading="lazy" alt="CookieXport Export tab showing cookies for github.com with cURL format selected">
+          </div>
+          <figcaption>Export tab — pick a format, filter, and download.</figcaption>
+        </figure>
+        <figure class="shot-card">
+          <div class="shot-img-wrap">
+            <img src="assets/img/screenshots/popup-multi.png" width="920" height="820" loading="lazy" alt="CookieXport Multi-Domain tab listing cookie counts across several sites">
+          </div>
+          <figcaption>Multi-domain — select and export several sites at once.</figcaption>
+        </figure>
+        <figure class="shot-card">
+          <div class="shot-img-wrap">
+            <img src="assets/img/screenshots/popup-history.png" width="920" height="716" loading="lazy" alt="CookieXport History tab listing past exports with re-download and copy actions">
+          </div>
+          <figcaption>History — revisit, re-download, or copy past exports.</figcaption>
+        </figure>
+        <figure class="shot-card">
+          <div class="shot-img-wrap">
+            <img src="assets/img/screenshots/options.png" width="1200" height="2032" loading="lazy" alt="CookieXport options page showing theme, language, default format and custom template settings">
+          </div>
+          <figcaption>Options — theme, language, default format & templates.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PRIVACY ═══ -->
+  <section id="privacy">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Privacy</span>
+        <h2>Everything stays on your device</h2>
+      </div>
+
+      <div class="privacy-card reveal">
+        <ul class="privacy-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> No data is ever sent to an external server.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> No remote code — everything ships inside the extension package.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> No personally identifiable information is collected.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> No data is sold or shared with third parties.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Cookies are only read/written at your explicit request.</li>
+        </ul>
+        <div class="privacy-visual">
+          <div class="privacy-badge">
+            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:24px;">
+        Read the full <a href="privacy.html" style="color:var(--accent-h);text-decoration:underline;">Privacy Policy</a>.
+      </p>
+
+      <h3 style="text-align:center;margin-top:56px;margin-bottom:24px;">Why each permission is needed</h3>
+      <table class="perm-table reveal">
+        <thead>
+          <tr><th>Permission</th><th>Why it's needed</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>cookies</td><td>Read cookies for the current domain to export them, and write cookies when you import a file.</td></tr>
+          <tr><td>tabs</td><td>Detect the active tab's domain so the right cookies are shown automatically.</td></tr>
+          <tr><td>downloads</td><td>Save exported cookie files directly to your Downloads folder.</td></tr>
+          <tr><td>storage</td><td>Remember your theme, language, and export preferences locally.</td></tr>
+          <tr><td>clipboardWrite</td><td>Copy formatted output (e.g. a cURL command) when you click "Copy".</td></tr>
+          <tr><td>contextMenus</td><td>Add a right-click shortcut to export cookies for the current site.</td></tr>
+          <tr><td>&lt;all_urls&gt;</td><td>Required by the Chrome cookies API to read cookies for whatever site you're on.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FINAL CTA ═══ -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card reveal">
+        <h2>Ready to take control of your cookies?</h2>
+        <p>Free, open, and it never leaves your browser.</p>
+        <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/cookiexport/elehbdibaiglkdbcaolaehdpobghehbm" target="_blank" rel="noopener">Add to Chrome — It's Free</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" fill="#C4A06A"/>
+        <circle cx="8.5" cy="9" r="1.6" fill="#6B3F1A"/>
+        <circle cx="14.5" cy="7.5" r="1.3" fill="#6B3F1A"/>
+        <circle cx="11" cy="14.5" r="1.5" fill="#6B3F1A"/>
+      </svg>
+      CookieXport — made for developers, by developers
+    </div>
+    <div class="footer-links">
+      <a href="https://chromewebstore.google.com/detail/cookiexport/elehbdibaiglkdbcaolaehdpobghehbm" target="_blank" rel="noopener">Chrome Web Store</a>
+      <a href="https://github.com/mtvrkan/cookiexport" target="_blank" rel="noopener">GitHub</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://github.com/mtvrkan/cookiexport/issues" target="_blank" rel="noopener">Report an issue</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
