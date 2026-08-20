@@ -1,0 +1,20 @@
+# Build artifacts
+*.zip
+
+# Local Claude Code settings
+.claude/settings.local.json
+
+# Assets not tracked in the repo
+icon5000.png
+STORE_LISTING.txt
+
+# Local-only art tooling — icon/OG generators and their output stay off GitHub
+tools/
+
+# Tooling
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

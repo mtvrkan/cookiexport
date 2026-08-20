@@ -1,0 +1,144 @@
+CookieXport — Privacy Policy
+Effective date: June 29, 2025 · Version 1.0.0
+
+────────────────────────────────────────────────────────────────
+Short version: CookieXport operates entirely on your device. It
+never sends any of your data, cookies, or browsing information
+to any external server. Everything stays local.
+────────────────────────────────────────────────────────────────
+
+
+1. What is CookieXport?
+
+CookieXport is a browser extension for Google Chrome and
+Chromium-based browsers. It allows you to read, filter, and
+export browser cookies stored on your device in multiple formats
+(cURL, Python, Node.js, Netscape, JSON, and more) for
+development, automation, and testing purposes.
+
+
+2. Permissions Used
+
+CookieXport requests the following browser permissions. Each is
+required for core functionality and nothing else.
+
+  cookies
+  To read cookies stored in your browser for the sites you
+  choose to export. Without this permission the extension
+  cannot function.
+
+  tabs
+  To detect the domain of the currently active tab so cookies
+  can be pre-filtered for that site automatically.
+
+  downloads
+  To save exported cookie files (e.g. cookies_youtube.txt) to
+  your local Downloads folder.
+
+  storage
+  To remember your preferences (theme, language, export format,
+  export history) locally in your browser. No cloud sync occurs.
+
+  clipboardWrite
+  To copy formatted cookie output to your clipboard when you
+  press the Copy button.
+
+  contextMenus
+  To add a right-click menu item ("Export cookies for this
+  site") for quick access on any page.
+
+  host_permissions: <all_urls>
+  The cookies API requires host access to read cookies for any
+  domain. This does not mean the extension reads or transmits
+  page content — it only accesses cookie data when you
+  explicitly trigger an export.
+
+
+3. Data Collection & Storage
+
+We collect nothing. CookieXport does not collect, transmit, or
+store any personal data on external servers. Specifically:
+
+  • Cookie data you export stays on your device only — it is
+    never sent anywhere by the extension.
+  • Your export history is stored in chrome.storage.local on
+    your device and is never synced to any server.
+  • Your preferences (language, theme, format) are stored
+    locally and never leave your browser.
+  • The extension makes zero network requests of its own.
+
+You can verify this yourself: open Chrome DevTools → Network
+tab while using CookieXport. You will see zero outgoing
+requests from the extension.
+
+
+4. Cookie Data Handling
+
+CookieXport reads browser cookies strictly on demand — only
+when you click Export, Copy, or use the right-click menu.
+The extension:
+
+  • Does NOT passively monitor or log your browsing activity.
+  • Does NOT read cookies in the background or on page load.
+  • Does NOT modify cookies in your browser (except when using
+    the Import feature at your explicit request).
+  • Only accesses cookies for the domain you select in the
+    export interface.
+
+
+5. Import Feature
+
+The optional Import tab allows you to load a cookies.txt or
+.json file from your local device and apply those cookies to
+your browser. This action:
+
+  • Is entirely user-initiated — you must manually select a
+    file and press "Apply to browser".
+  • Reads the file locally; the file contents are never
+    transmitted externally.
+  • Uses the standard chrome.cookies.set() API to write cookies.
+
+
+6. Third-Party Services
+
+CookieXport does not integrate with, connect to, or share data
+with any third-party service, analytics platform, or advertising
+network. No trackers.
+
+
+7. Children's Privacy
+
+CookieXport is a developer tool intended for users aged 13 and
+above. It does not knowingly collect data from children.
+
+
+8. Changes to This Policy
+
+If this privacy policy changes, the updated version will be
+published at the same URL. The extension version number in the
+policy header will be incremented accordingly.
+
+
+9. Contact
+
+If you have questions about this privacy policy or the
+extension's data practices, please open an issue on the
+extension's support page or contact the developer directly via
+the Chrome Web Store listing.
+
+────────────────────────────────────────────────────────────────
+CookieXport · This extension is an independent developer
+tool and is not affiliated with Google LLC.
+
+Third-party names referenced in this extension are trademarks
+of their respective owners: Python® is a trademark of the
+Python Software Foundation. Node.js® is a trademark of the
+OpenJS Foundation. PHP is a trademark of the PHP Group. Go is
+a trademark of Google LLC. Playwright is a trademark of
+Microsoft Corporation. Puppeteer is a product of Google LLC.
+Selenium is a trademark of the Software Freedom Conservancy.
+YouTube™ is a trademark of Google LLC. All other product names,
+logos, and brands are property of their respective owners.
+Use of these names in CookieXport is for descriptive
+identification purposes only and does not imply endorsement.
+────────────────────────────────────────────────────────────────

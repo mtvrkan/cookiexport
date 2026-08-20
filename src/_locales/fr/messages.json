@@ -1,0 +1,5 @@
+{
+  "extName": { "message": "CookieXport" },
+  "extDescription": { "message": "Enregistrez les cookies du site actuel dans un fichier ou copiez-les dans le presse-papiers. Fonctionne hors ligne, sans compte." },
+  "ctxExport": { "message": "Exporter les cookies de ce site — CookieXport" }
+}

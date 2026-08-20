@@ -1,0 +1,5 @@
+{
+  "extName": { "message": "CookieXport" },
+  "extDescription": { "message": "Guarda las cookies del sitio actual en un archivo o cópialas al portapapeles. Funciona sin conexión y sin necesidad de cuenta." },
+  "ctxExport": { "message": "Exportar cookies de este sitio — CookieXport" }
+}

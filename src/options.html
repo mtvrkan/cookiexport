@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CookieXport — Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="page-header">
+    <div class="logo">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="cx-tile" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3B82F6"/>
+            <stop offset="1" stop-color="#22D3EE"/>
+          </linearGradient>
+        </defs>
+        <rect width="32" height="32" rx="7.52" fill="url(#cx-tile)"/>
+        <g fill="none" stroke="#fff" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.37 17.03A7.52 7.52 0 1 1 15.48 10.72"/>
+          <path d="m20.93 11.07 5.32-5.32"/>
+          <path d="M19.37 5.75h6.88v6.88"/>
+        </g>
+        <g fill="#fff">
+          <circle cx="10.61" cy="16.13" r="1.5"/>
+          <circle cx="13.47" cy="21.39" r="1.28"/>
+          <circle cx="16.63" cy="20.34" r="1.02"/>
+        </g>
+</svg>
+      <div>
+        <h1>CookieXport</h1>
+        <p id="lbl-settings" data-i18n="s_settings">Settings</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- Appearance -->
+    <section class="section">
+      <h2 class="section-title" data-i18n="s_theme">Theme</h2>
+      <div class="card">
+        <div class="row">
+          <div class="row-info">
+            <label data-i18n="s_theme">Theme</label>
+          </div>
+          <select id="sel-theme" class="select">
+            <option value="dark"   data-i18n="dark">Dark</option>
+            <option value="light"  data-i18n="light">Light</option>
+            <option value="system" data-i18n="sys">System</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Language -->
+    <section class="section">
+      <h2 class="section-title" data-i18n="s_lang">Language</h2>
+      <div class="card">
+        <div class="row">
+          <div class="row-info">
+            <label data-i18n="s_lang">Language</label>
+          </div>
+          <select id="sel-lang" class="select"></select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Export -->
+    <section class="section">
+      <h2 class="section-title" data-i18n="s_format">Export</h2>
+      <div class="card">
+        <div class="row">
+          <div class="row-info">
+            <label data-i18n="s_format">Default format</label>
+          </div>
+          <select id="sel-format" class="select">
+            <option value="netscape">Netscape (.txt)</option>
+            <option value="json">JSON (.json)</option>
+            <option value="curl">cURL (.sh)</option>
+            <option value="header">Header string</option>
+            <option value="python">Python requests (.py)</option>
+            <option value="node">Node.js fetch (.js)</option>
+            <option value="playwright">Playwright (.js)</option>
+            <option value="puppeteer">Puppeteer (.js)</option>
+            <option value="selenium">Selenium Python (.py)</option>
+            <option value="php">PHP cURL (.php)</option>
+            <option value="go">Go net/http (.go)</option>
+            <option value="har">HAR (.json)</option>
+            <option value="base64">Base64 (.txt)</option>
+            <option value="custom">Custom template (.txt)</option>
+          </select>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row">
+          <div class="row-info">
+            <label data-i18n="s_sub">Include subdomains by default</label>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="chk-subdomains">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row">
+          <div class="row-info">
+            <label data-i18n="s_vals">Show cookie values</label>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="chk-show-values">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom template -->
+    <section class="section">
+      <h2 class="section-title" data-i18n="s_tpl">Custom Template</h2>
+      <div class="card">
+        <div class="tpl-area">
+          <textarea id="tpl-input" class="tpl-textarea" rows="5" placeholder="{{name}}={{value}}; domain={{domain}}"></textarea>
+          <p class="tpl-hint" data-i18n="s_tpl_hint">Variables: {{name}} {{value}} {{domain}} {{path}} {{expires}} {{expiresISO}} {{secure}} {{httpOnly}}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="section">
+      <h2 class="section-title" data-i18n="s_privacy_title">Privacy</h2>
+      <div class="card">
+        <div class="info-box">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p data-i18n="s_privacy">CookieXport works 100% locally. No data is ever sent to a server.</p>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="row-info">
+            <label data-i18n="s_reset_label">Reset all settings</label>
+          </div>
+          <button id="btn-reset" class="btn-danger" data-i18n="s_reset">Reset</button>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="row-info">
+            <label data-i18n="s_privacy_title">Privacy</label>
+            <span data-i18n="s_privacy">CookieXport works 100% locally. No data is ever sent to a server.</span>
+          </div>
+          <a id="link-privacy" href="https://cookiexport.mtvrkan.com/privacy" target="_blank" rel="noopener" class="btn-link" data-i18n="s_privacy_link">Privacy Policy ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="version-line" id="version-line">CookieXport</p>
+    <p class="credit-line">
+      Developed with
+      <svg class="credit-heart" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="love">
+        <path d="M12 21s-7.5-4.7-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.3-9.6 9-9.6 9z"/>
+      </svg>
+      by
+      <a href="https://mtvrkan.com" target="_blank" rel="noopener">mtvrkan</a>
+    </p>
+
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+</div>
+<script src="i18n.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

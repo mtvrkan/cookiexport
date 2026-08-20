@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CookieXport — Chrome'da tarayıcı çerezlerini 13 formatta dışa aktarın</title>
+<meta name="description" content="CookieXport, Chrome için en güçlü çerez dışa aktarma aracı. Çerezleri Netscape, JSON, cURL, Python, Node.js, Playwright, Puppeteer ve daha fazlası olarak dışa aktarın. %100 yerel, sıfır telemetri.">
+<link rel="canonical" href="https://cookiexport.mtvrkan.com/tr/">
+<link rel="alternate" hreflang="en" href="https://cookiexport.mtvrkan.com/">
+<link rel="alternate" hreflang="tr" href="https://cookiexport.mtvrkan.com/tr/">
+<link rel="alternate" hreflang="x-default" href="https://cookiexport.mtvrkan.com/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="mtvrkan">
+<meta name="theme-color" content="#08080a">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/icon32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/icon16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="CookieXport — Tarayıcı çerezlerini 13 formatta dışa aktarın">
+<meta property="og:description" content="Netscape, JSON, cURL, Python, Node.js, Playwright, Puppeteer ve dahası. %100 yerel, sıfır telemetri.">
+<meta property="og:image" content="https://cookiexport.mtvrkan.com/assets/img/og-image-tr.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CookieXport — tarayıcı çerezlerini 13 formatta dışa aktarın">
+<meta property="og:url" content="https://cookiexport.mtvrkan.com/tr/">
+<meta property="og:site_name" content="CookieXport">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CookieXport — Tarayıcı çerezlerini 13 formatta dışa aktarın">
+<meta name="twitter:description" content="Netscape, JSON, cURL, Python, Node.js, Playwright, Puppeteer ve dahası. %100 yerel, sıfır telemetri.">
+<meta name="twitter:image" content="https://cookiexport.mtvrkan.com/assets/img/og-image-tr.png">
+<meta name="twitter:image:alt" content="CookieXport — tarayıcı çerezlerini 13 formatta dışa aktarın">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://cookiexport.mtvrkan.com/#app",
+      "name": "CookieXport",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Edge, Brave, Opera, Vivaldi",
+      "browserRequirements": "Chromium tabanlı bir tarayıcı gerektirir",
+      "softwareVersion": "1.1.1",
+      "description": "Tarayıcı çerezlerini 13 formatta dışa aktarın: Netscape, JSON, cURL, Python, Node.js, Playwright, Puppeteer ve dahası. %100 yerel, sıfır telemetri.",
+      "url": "https://cookiexport.mtvrkan.com/tr/",
+      "installUrl": "https://chromewebstore.google.com/detail/cookiexport/elehbdibaiglkdbcaolaehdpobghehbm",
+      "image": "https://cookiexport.mtvrkan.com/assets/img/og-image-tr.png",
+      "isAccessibleForFree": true,
+      "inLanguage": ["en", "tr", "de", "fr", "es", "pt", "ru", "ja", "ar", "zh-CN"],
+      "featureList": [
+        "Netscape çerez dosyası dışa aktarma",
+        "Tüm çerez meta verileriyle JSON dışa aktarma",
+        "cURL komutu dışa aktarma",
+        "Python requests betiği dışa aktarma",
+        "Node.js fetch kod parçası dışa aktarma",
+        "Playwright addCookies() dışa aktarma",
+        "Puppeteer setCookie() dışa aktarma",
+        "Selenium add_cookie() dışa aktarma",
+        "PHP cURL dışa aktarma",
+        "Go net/http dışa aktarma",
+        "HAR dışa aktarma",
+        "Base64 dışa aktarma",
+        "Özel şablonla dışa aktarma",
+        "Çoklu domain dışa aktarma",
+        "Çerez içe aktarma",
+        "Yerel dışa aktarma geçmişi"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": { "@id": "https://cookiexport.mtvrkan.com/#author" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://cookiexport.mtvrkan.com/#author",
+      "name": "mtvrkan",
+      "url": "https://mtvrkan.com"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cookiexport.mtvrkan.com/tr/#webpage",
+      "name": "CookieXport — Tarayıcı çerezlerini 13 formatta dışa aktarın",
+      "url": "https://cookiexport.mtvrkan.com/tr/",
+      "inLanguage": "tr",
+      "isPartOf": { "@id": "https://cookiexport.mtvrkan.com/#website" },
+      "about": { "@id": "https://cookiexport.mtvrkan.com/#app" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cookiexport.mtvrkan.com/#website",
+      "name": "CookieXport",
+      "url": "https://cookiexport.mtvrkan.com/",
+      "inLanguage": ["en", "tr"],
+      "publisher": { "@id": "https://cookiexport.mtvrkan.com/#author" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a href="#main" class="sr-only" style="position:absolute;left:-9999px;">İçeriğe geç</a>
+
+<svg class="cx-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="cx-tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" aria-label="CookieXport ana sayfa">
+      <svg class="cx-mark" width="24" height="24" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="7.52" fill="url(#cx-tile)"/>
+        <g fill="none" stroke="#fff" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.37 17.03A7.52 7.52 0 1 1 15.48 10.72"/>
+          <path d="m20.93 11.07 5.32-5.32"/>
+          <path d="M19.37 5.75h6.88v6.88"/>
+        </g>
+        <g fill="#fff">
+          <circle cx="10.61" cy="16.13" r="1.5"/>
+          <circle cx="13.47" cy="21.39" r="1.28"/>
+          <circle cx="16.63" cy="20.34" r="1.02"/>
+        </g>
+</svg>
+      CookieXport
+    </a>
+    <nav class="nav-links" aria-label="Ana menü">
+      <a href="#formats">Formatlar</a>
+      <a href="#features">Özellikler</a>
+      <a href="#screenshots">Ekran görüntüleri</a>
+      <a href="#privacy">Gizlilik</a>
+      <a href="https://github.com/mtvrkan/cookiexport" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <div class="nav-cta">
+      <nav class="lang-switch" aria-label="Dil">
+        <a href="/" hreflang="en" lang="en">EN</a>
+        <a href="/tr/" hreflang="tr" lang="tr" aria-current="page">TR</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" id="nav-toggle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="container">
+     <div class="hero-copy">
+      <span class="hero-badge">
+        <span class="dot" aria-hidden="true"></span>
+        Chrome Web Mağazası'nda ücretsiz
+      </span>
+      <h1>Tarayıcı çerezlerini <span class="gradient-text">13 formatta</span> anında dışa aktarın</h1>
+      <p class="lead">CookieXport; geliştiricilere, otomasyon mühendislerine ve güvenlik araştırmacılarına tarayıcı çerezleri üzerinde tam kontrol verir — Netscape, JSON, cURL, Python, Playwright, Puppeteer ve dahası. Sunucu yok, telemetri yok, gereksiz hiçbir şey yok.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/cookiexport/elehbdibaiglkdbcaolaehdpobghehbm" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Zm0 4a6 6 0 0 1 5.29 3.17l-3.31 5.73A2.99 2.99 0 0 0 12 9a3 3 0 0 0-2.6 1.5L5.4 7.34A6 6 0 0 1 12 6Zm-6 6a6 6 0 0 1 .4-2.14l3.62 6.27A6 6 0 0 1 6 12Zm6 6a6 6 0 0 1-3-.8l3.6-6.24.03.04a3 3 0 0 0 2.4 1.2 2.94 2.94 0 0 0 .7-.08l-3.7 6.4a5.8 5.8 0 0 1-.03.48Zm5.6-2.5-3.32-5.75A2.99 2.99 0 0 0 15 9h6.9A6 6 0 0 1 11.6 15.5Z"/></svg>
+          Chrome'a Ekle — Ücretsiz
+        </a>
+        <a class="btn btn-secondary btn-lg" href="https://github.com/mtvrkan/cookiexport" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          GitHub'da incele
+        </a>
+      </div>
+      <div class="hero-meta">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> %100 yerel</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Hesap gerekmez</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Her sitede çalışır</span>
+      </div>
+      <p class="hero-browsers">Brave, Edge, Opera, Vivaldi ve diğer Chromium tabanlı tarayıcılara da kurulur</p>
+     </div>
+
+     <div class="hero-demo">
+       <p class="demo-label"><span class="demo-live-dot" aria-hidden="true"></span> Canlı demo — örnek veri, bu sayfadan hiçbir şey dışarı çıkmaz</p>
+       <div class="demo-frame">
+         <div class="frame-bar"><span></span><span></span><span></span></div>
+
+         <div class="demo" id="demo">
+           <header class="demo-head">
+             <span class="demo-brand">
+               <svg class="cx-mark" width="19" height="19" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="7.52" fill="url(#cx-tile)"/>
+        <g fill="none" stroke="#fff" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.37 17.03A7.52 7.52 0 1 1 15.48 10.72"/>
+          <path d="m20.93 11.07 5.32-5.32"/>
+          <path d="M19.37 5.75h6.88v6.88"/>
+        </g>
+        <g fill="#fff">
+          <circle cx="10.61" cy="16.13" r="1.5"/>
+          <circle cx="13.47" cy="21.39" r="1.28"/>
+          <circle cx="16.63" cy="20.34" r="1.02"/>
+        </g>
+</svg>
+               CookieXport
+             </span>
+             <span class="demo-head-actions">
+               <button class="demo-icon-btn" id="demo-mask" type="button" aria-pressed="true" aria-label="Çerez değerlerini göster" title="Çerez değerlerini göster">
+                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+               </button>
+               <button class="demo-icon-btn" id="demo-theme" type="button" aria-label="Tema (yalnızca demo)" title="Tema — yalnızca demo">
+                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+               </button>
+               <button class="demo-icon-btn" id="demo-settings" type="button" aria-label="Ayarlar (yalnızca demo)" title="Ayarlar — yalnızca demo">
+                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.6.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+               </button>
+             </span>
+           </header>
+
+           <nav class="demo-tabs" role="tablist" aria-label="Demo sekmeleri">
+             <button class="demo-tab active" data-pane="export" role="tab" aria-selected="true" type="button">Dışa Aktar</button>
+             <button class="demo-tab" data-pane="multi" role="tab" aria-selected="false" type="button">Çoklu Domain</button>
+             <button class="demo-tab" data-pane="history" role="tab" aria-selected="false" type="button">Geçmiş</button>
+             <button class="demo-tab" data-pane="import" role="tab" aria-selected="false" type="button">İçe Aktar</button>
+           </nav>
+
+           <div class="demo-pane active" data-pane="export" role="tabpanel">
+             <div class="demo-domain">
+               <strong id="demo-domain">github.com</strong>
+               <label class="demo-check">
+                 <input type="checkbox" id="demo-subdomains" checked>
+                 <span>Alt domainler</span>
+               </label>
+             </div>
+
+             <div class="demo-row">
+               <span class="demo-row-label">Hızlı:</span>
+               <div class="demo-chips demo-chips--scroll" id="demo-sites"></div>
+             </div>
+
+             <div class="demo-row">
+               <span class="demo-row-label">Araç:</span>
+               <div class="demo-chips demo-chips--scroll" id="demo-formats"></div>
+             </div>
+
+             <div class="demo-search">
+               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+               <input type="search" id="demo-search" placeholder="Ad veya değere göre ara…" aria-label="Çerezlerde ara">
+             </div>
+
+             <div class="demo-chips demo-chips--filters" id="demo-filters"></div>
+
+             <ul class="demo-list" id="demo-list"></ul>
+
+             <div class="demo-bar">
+               <label class="demo-check">
+                 <input type="checkbox" id="demo-all">
+                 <span id="demo-selected">0 seçili</span>
+               </label>
+               <span class="demo-count" id="demo-count">/ 6 çerez</span>
+             </div>
+
+             <div class="demo-actions">
+               <button class="demo-btn" id="demo-copy" type="button">
+                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                 Kopyala
+               </button>
+               <button class="demo-btn demo-btn--primary" id="demo-download" type="button">
+                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                 İndir
+               </button>
+               <button class="demo-btn demo-btn--ghost" id="demo-toggle-out" type="button" aria-expanded="false" aria-controls="demo-output" title="Çıktıyı önizle">
+                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+               </button>
+             </div>
+
+             <div class="demo-output" id="demo-output" hidden><pre><code id="demo-output-code"></code></pre></div>
+           </div>
+
+           <div class="demo-pane" data-pane="multi" role="tabpanel" hidden>
+             <div class="demo-search">
+               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+               <input type="search" id="demo-multi-search" placeholder="Domainleri filtrele…" aria-label="Domainleri filtrele">
+             </div>
+             <ul class="demo-list demo-list--domains" id="demo-multi-list"></ul>
+             <div class="demo-actions">
+               <button class="demo-btn demo-btn--primary demo-btn--wide" id="demo-multi-export" type="button">Seçili domainleri dışa aktar</button>
+             </div>
+           </div>
+
+           <div class="demo-pane" data-pane="history" role="tabpanel" hidden>
+             <div class="demo-bar demo-bar--head">
+               <span>Geçmiş</span>
+               <button class="demo-link-btn" id="demo-history-clear" type="button">Tümünü temizle</button>
+             </div>
+             <ul class="demo-list demo-list--history" id="demo-history"></ul>
+           </div>
+
+           <div class="demo-pane" data-pane="import" role="tabpanel" hidden>
+             <p class="demo-note">Bir <code>cookies.txt</code> (Netscape) veya <code>.json</code> dışa aktarımını yapıştırın; CookieXport hiçbir şey yazmadan önce onu ayrıştırır.</p>
+             <textarea id="demo-import" class="demo-textarea" rows="6" spellcheck="false" aria-label="Çerez dosyası içeriğini yapıştırın" placeholder="# Netscape HTTP Cookie File
+.github.com	TRUE	/	TRUE	1799999999	_octo	GH1.1.482935712"></textarea>
+             <p class="demo-import-result" id="demo-import-result" role="status">Girdi bekleniyor…</p>
+             <div class="demo-actions">
+               <button class="demo-btn" id="demo-import-sample" type="button">Örnek yapıştır</button>
+               <button class="demo-btn demo-btn--primary" id="demo-import-apply" type="button">Tarayıcıya uygula</button>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Netscape</span><span class="marquee-item">JSON</span><span class="marquee-item">cURL</span><span class="marquee-item">Python requests</span><span class="marquee-item">Node.js fetch</span><span class="marquee-item">Playwright</span><span class="marquee-item">Puppeteer</span><span class="marquee-item">Selenium</span><span class="marquee-item">PHP cURL</span><span class="marquee-item">Go net/http</span><span class="marquee-item">HAR</span><span class="marquee-item">Base64</span><span class="marquee-item">Özel şablon</span><span class="marquee-item">Netscape</span><span class="marquee-item">JSON</span><span class="marquee-item">cURL</span><span class="marquee-item">Python requests</span><span class="marquee-item">Node.js fetch</span><span class="marquee-item">Playwright</span><span class="marquee-item">Puppeteer</span><span class="marquee-item">Selenium</span><span class="marquee-item">PHP cURL</span><span class="marquee-item">Go net/http</span><span class="marquee-item">HAR</span><span class="marquee-item">Base64</span><span class="marquee-item">Özel şablon</span>
+    </div>
+  </div>
+
+  <div class="trust-bar">
+    <div class="container" data-reveal-children="pop">
+      <span class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        %100 yerel işleme
+      </span>
+      <span class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 3 6v6c0 5 3.8 8.9 9 10 5.2-1.1 9-5 9-10V6l-9-4Z"/></svg>
+        Sıfır telemetri
+      </span>
+      <span class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="4.9" y1="4.9" x2="19.1" y2="19.1"/></svg>
+        Harici ağ isteği yok
+      </span>
+      <span class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+        10 dil desteği
+      </span>
+    </div>
+  </div>
+
+  <section id="formats">
+    <div class="container">
+      <div class="section-head" data-reveal-children>
+        <span class="eyebrow">Dışa aktarma formatları</span>
+        <h2>Tek tıkla, kullanıma hazır 13 format</h2>
+        <p>İş akışınıza uyan formatı seçin — düz bir Netscape çerez dosyasından eksiksiz bir Playwright betiğine kadar.</p>
+      </div>
+
+      <div class="format-grid" data-reveal-children>
+        <div class="format-card card-base"><span class="format-index">01</span><div class="format-name">Netscape <span class="format-tag">.txt</span></div><p>wget, curl ve çoğu komut satırı indirme aracıyla uyumlu.</p></div>
+        <div class="format-card card-base"><span class="format-index">02</span><div class="format-name">JSON <span class="format-tag">.json</span></div><p>Tüm çerez meta verileriyle yapılandırılmış veri.</p></div>
+        <div class="format-card card-base"><span class="format-index">03</span><div class="format-name">cURL <span class="format-tag">shell</span></div><p>Cookie başlığıyla, yapıştırıp çalıştırmaya hazır komut.</p></div>
+        <div class="format-card card-base"><span class="format-index">04</span><div class="format-name">Python requests <span class="format-tag">.py</span></div><p>Oturum kurulumuyla eksiksiz betik.</p></div>
+        <div class="format-card card-base"><span class="format-index">05</span><div class="format-name">Node.js fetch <span class="format-tag">.js</span></div><p>Modern Node için async'e hazır kod parçası.</p></div>
+        <div class="format-card card-base"><span class="format-index">06</span><div class="format-name">Playwright <span class="format-tag">.js</span></div><p><code>addCookies()</code> için hazır dizi.</p></div>
+        <div class="format-card card-base"><span class="format-index">07</span><div class="format-name">Puppeteer <span class="format-tag">.js</span></div><p><code>setCookie()</code> için hazır dizi.</p></div>
+        <div class="format-card card-base"><span class="format-index">08</span><div class="format-name">Selenium <span class="format-tag">.py</span></div><p><code>add_cookie()</code> sürücü çağrıları.</p></div>
+        <div class="format-card card-base"><span class="format-index">09</span><div class="format-name">PHP cURL <span class="format-tag">.php</span></div><p>Çerez dizesiyle <code>curl_setopt</code>.</p></div>
+        <div class="format-card card-base"><span class="format-index">10</span><div class="format-name">Go net/http <span class="format-tag">.go</span></div><p><code>req.AddCookie()</code> çağrıları.</p></div>
+        <div class="format-card card-base"><span class="format-index">11</span><div class="format-name">HAR <span class="format-tag">.har</span></div><p>Standart HTTP Archive formatı.</p></div>
+        <div class="format-card card-base"><span class="format-index">12</span><div class="format-name">Base64 <span class="format-tag">kodlu</span></div><p>Güvenli aktarım için kodlanmış.</p></div>
+        <div class="format-card card-base is-custom"><span class="format-index">13</span><div class="format-name">Özel şablon <span class="format-tag">serbest</span></div><p><code>{{name}}</code>, <code>{{value}}</code> değişkenleriyle kendi formatınız.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head" data-reveal-children>
+        <span class="eyebrow">İş başında</span>
+        <h2>Tam olarak ihtiyacınız olanı kopyalayın</h2>
+        <p>Her dışa aktarma anında tarayıcınızda üretilir — çıktıyı görmek için bir sekme seçin.</p>
+      </div>
+
+      <div class="code-preview" data-reveal="scale">
+        <div class="code-preview-head">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <div class="code-preview-tabs" role="tablist" aria-label="Dışa aktarma formatı önizlemesi">
+            <button class="code-tab active" data-tab="curl" role="tab" aria-selected="true">cURL</button>
+            <button class="code-tab" data-tab="python" role="tab" aria-selected="false">Python</button>
+            <button class="code-tab" data-tab="playwright" role="tab" aria-selected="false">Playwright</button>
+            <button class="code-tab" data-tab="json" role="tab" aria-selected="false">JSON</button>
+          </div>
+          <button class="copy-btn" id="copy-code" type="button">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Kopyala
+          </button>
+        </div>
+
+        <div class="code-panel active" data-panel="curl">
+<pre><code>curl <span class="tok-str">'https://example.com/api'</span> \
+  -H <span class="tok-key">'Cookie:</span> <span class="tok-str">session_id=a1b2c3; theme=dark; auth_token=xyz789</span><span class="tok-key">'</span></code></pre>
+        </div>
+        <div class="code-panel" data-panel="python">
+<pre><code><span class="tok-key">import</span> requests
+
+session = requests.Session()
+session.cookies.update({
+    <span class="tok-str">"session_id"</span>: <span class="tok-str">"a1b2c3"</span>,
+    <span class="tok-str">"theme"</span>: <span class="tok-str">"dark"</span>,
+    <span class="tok-str">"auth_token"</span>: <span class="tok-str">"xyz789"</span>,
+})
+response = session.<span class="tok-fn">get</span>(<span class="tok-str">"https://example.com/api"</span>)</code></pre>
+        </div>
+        <div class="code-panel" data-panel="playwright">
+<pre><code><span class="tok-key">await</span> context.<span class="tok-fn">addCookies</span>([
+  { name: <span class="tok-str">"session_id"</span>, value: <span class="tok-str">"a1b2c3"</span>, domain: <span class="tok-str">".example.com"</span>, path: <span class="tok-str">"/"</span> },
+  { name: <span class="tok-str">"theme"</span>,      value: <span class="tok-str">"dark"</span>,   domain: <span class="tok-str">".example.com"</span>, path: <span class="tok-str">"/"</span> }
+]);</code></pre>
+        </div>
+        <div class="code-panel" data-panel="json">
+<pre><code>[
+  {
+    <span class="tok-key">"name"</span>: <span class="tok-str">"session_id"</span>,
+    <span class="tok-key">"value"</span>: <span class="tok-str">"a1b2c3"</span>,
+    <span class="tok-key">"domain"</span>: <span class="tok-str">".example.com"</span>,
+    <span class="tok-key">"secure"</span>: <span class="tok-key">true</span>,
+    <span class="tok-key">"httpOnly"</span>: <span class="tok-key">true</span>
+  }
+]</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="section-head" data-reveal-children>
+        <span class="eyebrow">Özellikler</span>
+        <h2>DevTools'ta yaşayan geliştiriciler için</h2>
+        <p>Her özellik, sizi terminale gitmekten kurtarmak için tasarlandı.</p>
+      </div>
+
+      <div class="features-grid" data-reveal-children="pop">
+        <div class="feature-card card-base">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <h3>Anında domain algılama</h3>
+          <p>Aktif sekmenin domainini otomatik okur — URL kopyalayıp yapıştırmak yok.</p>
+        </div>
+        <div class="feature-card card-base">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <h3>Hazır kısayollar</h3>
+          <p>YouTube, Netflix, Twitter, GitHub, Discord ve 17 site daha, tek tıkla.</p>
+        </div>
+        <div class="feature-card card-base">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3Z"/></svg></div>
+          <h3>Akıllı filtreler</h3>
+          <p>Secure, HttpOnly, oturum veya süresi yakında dolacak çerezlere göre filtreleyin.</p>
+        </div>
+        <div class="feature-card card-base">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <h3>Tam metin arama</h3>
+          <p>Çerez adları ve değerleri arasında gerçek zamanlı arama.</p>
+        </div>
+        <div class="feature-card card-base">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <h3>Çoklu domain dışa aktarma</h3>
+          <p>Birden fazla domainin çerezlerini tek seferde seçip dışa aktarın.</p>
+        </div>
+        <div class="feature-card card-base">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v5h5"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/></svg></div>
+          <h3>Dışa aktarma geçmişi</h3>
+          <p>Her dışa aktarma yerel olarak kaydedilir — istediğiniz zaman tekrar indirin veya kopyalayın.</p>
+        </div>
+        <div class="feature-card card-base">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+          <h3>Çerez içe aktarma</h3>
+          <p>Çerezleri bir <code>.txt</code> veya <code>.json</code> dosyasından geri yükleyin.</p>
+        </div>
+        <div class="feature-card card-base">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
+          <h3>Açık ve koyu tema</h3>
+          <p>Sistem temanızı otomatik algılar, dilerseniz elle değiştirin.</p>
+        </div>
+        <div class="feature-card card-base">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg></div>
+          <h3>10 dil</h3>
+          <p>Türkçe, Almanca, Fransızca, Japonca ve dahası dahil tam arayüz çevirisi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screenshots">
+    <div class="container">
+      <div class="section-head" data-reveal-children>
+        <span class="eyebrow">Göz atın</span>
+        <h2>Sade ve odaklı bir arayüz</h2>
+        <p>Karmaşa yok — yalnızca ihtiyacınız olan araçlar, doğrudan araç çubuğunuzda.</p>
+      </div>
+
+      <div class="shots-viewer">
+        <div class="shots-tabs" data-reveal-children="side" role="tablist" aria-label="Eklenti ekranları">
+          <button class="shot-tab active" id="shot-tab-export" data-shot="export" role="tab" aria-selected="true" aria-controls="shot-panel-export" type="button">
+            <span class="shot-tab-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
+            <span class="shot-tab-text">
+              <span class="shot-tab-title">Dışa Aktar</span>
+              <span class="shot-tab-desc">Format seçin, filtreleyin ve indirin.</span>
+            </span>
+          </button>
+          <button class="shot-tab" id="shot-tab-multi" data-shot="multi" role="tab" aria-selected="false" aria-controls="shot-panel-multi" type="button">
+            <span class="shot-tab-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+            <span class="shot-tab-text">
+              <span class="shot-tab-title">Çoklu domain</span>
+              <span class="shot-tab-desc">Birden fazla siteyi tek seferde seçip aktarın.</span>
+            </span>
+          </button>
+          <button class="shot-tab" id="shot-tab-history" data-shot="history" role="tab" aria-selected="false" aria-controls="shot-panel-history" type="button">
+            <span class="shot-tab-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v5h5"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/><path d="M12 7v5l3 2"/></svg></span>
+            <span class="shot-tab-text">
+              <span class="shot-tab-title">Geçmiş</span>
+              <span class="shot-tab-desc">Geçmiş aktarımları görün, tekrar indirin veya kopyalayın.</span>
+            </span>
+          </button>
+          <button class="shot-tab" id="shot-tab-options" data-shot="options" role="tab" aria-selected="false" aria-controls="shot-panel-options" type="button">
+            <span class="shot-tab-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></span>
+            <span class="shot-tab-text">
+              <span class="shot-tab-title">Ayarlar</span>
+              <span class="shot-tab-desc">Tema, dil, varsayılan format ve şablonlar.</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="shots-stage" data-reveal="scale">
+          <div class="shot-panel active" id="shot-panel-export" data-shot="export" role="tabpanel" aria-labelledby="shot-tab-export">
+            <p class="sr-only">CookieXport Dışa Aktar sekmesi: github.com çerezleri listeleniyor ve cURL formatı seçili</p>
+            <div class="shot-render" inert></div>
+          </div>
+          <div class="shot-panel" id="shot-panel-multi" data-shot="multi" role="tabpanel" aria-labelledby="shot-tab-multi" hidden>
+            <p class="sr-only">CookieXport Çoklu Domain sekmesi: birden fazla sitenin çerez sayıları listeleniyor</p>
+            <div class="shot-render" inert></div>
+          </div>
+          <div class="shot-panel" id="shot-panel-history" data-shot="history" role="tabpanel" aria-labelledby="shot-tab-history" hidden>
+            <p class="sr-only">CookieXport Geçmiş sekmesi: geçmiş dışa aktarımlar, tekrar indirme ve kopyalama düğmeleriyle</p>
+            <div class="shot-render" inert></div>
+          </div>
+          <div class="shot-panel shot-panel--scroll" id="shot-panel-options" data-shot="options" role="tabpanel" aria-labelledby="shot-tab-options" hidden>
+            <p class="sr-only">CookieXport ayarlar sayfası: tema, dil, varsayılan format ve özel şablon ayarları</p>
+            <div class="shot-render shot-render--page" inert></div>
+          </div>
+          <noscript><p class="shot-noscript">Arayüzü görmek için JavaScript'i açın — ya da eklentiyi kurup açılır pencereyi açın.</p></noscript>
+          <span class="shot-scroll-hint" aria-hidden="true">Tamamını görmek için kaydırın</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="container">
+      <div class="section-head" data-reveal-children>
+        <span class="eyebrow">Gizlilik</span>
+        <h2>Her şey cihazınızda kalır</h2>
+      </div>
+
+      <div class="privacy-card card-base" data-reveal="up">
+        <ul class="privacy-list" data-reveal-children="side">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Hiçbir veri harici bir sunucuya gönderilmez.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Uzaktan kod yok — her şey eklenti paketinin içinde gelir.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Kişisel olarak tanımlanabilir hiçbir bilgi toplanmaz.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Hiçbir veri satılmaz veya üçüncü taraflarla paylaşılmaz.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Çerezler yalnızca siz açıkça istediğinizde okunur veya yazılır.</li>
+        </ul>
+        <div class="privacy-visual" data-reveal="scale">
+          <div class="privacy-badge">
+            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <p class="privacy-note" data-reveal="up">
+        Tam <a href="/tr/privacy">Gizlilik Politikası</a>'nı okuyun.
+      </p>
+
+      <h3 class="perm-title" data-reveal="blur">Her izin neden gerekli</h3>
+      <table class="perm-table" data-reveal="up">
+        <thead>
+          <tr><th>İzin</th><th>Neden gerekli</th></tr>
+        </thead>
+        <tbody data-reveal-children="rows">
+          <tr><td>cookies</td><td>Dışa aktarmak için mevcut domainin çerezlerini okumak ve bir dosya içe aktardığınızda çerez yazmak.</td></tr>
+          <tr><td>tabs</td><td>Doğru çerezlerin otomatik gösterilmesi için aktif sekmenin domainini algılamak.</td></tr>
+          <tr><td>downloads</td><td>Dışa aktarılan çerez dosyalarını doğrudan İndirilenler klasörünüze kaydetmek.</td></tr>
+          <tr><td>storage</td><td>Tema, dil ve dışa aktarma tercihlerinizi yerel olarak hatırlamak.</td></tr>
+          <tr><td>clipboardWrite</td><td>"Kopyala"ya tıkladığınızda biçimlendirilmiş çıktıyı (ör. bir cURL komutu) kopyalamak.</td></tr>
+          <tr><td>contextMenus</td><td>Mevcut sitenin çerezlerini dışa aktarmak için sağ tık kısayolu eklemek.</td></tr>
+          <tr><td>&lt;all_urls&gt;</td><td>Bulunduğunuz sitenin çerezlerini okuyabilmek için Chrome çerez API'sinin gerektirdiği izin.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card" data-reveal="rise">
+        <svg class="cta-mark cta-mark--left" width="320" height="320" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="1.1" y="1.1" width="29.8" height="29.8" rx="6.8" fill="none" stroke="currentColor" stroke-width="1"/>
+          <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.37 17.03A7.52 7.52 0 1 1 15.48 10.72"/>
+            <path d="m20.93 11.07 5.32-5.32"/>
+            <path d="M19.37 5.75h6.88v6.88"/>
+          </g>
+          <g fill="currentColor">
+            <circle cx="10.61" cy="16.13" r="1.2"/>
+            <circle cx="13.47" cy="21.39" r="1"/>
+            <circle cx="16.63" cy="20.34" r="0.8"/>
+          </g>
+</svg>
+        <svg class="cta-mark cta-mark--right" width="240" height="240" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="1.1" y="1.1" width="29.8" height="29.8" rx="6.8" fill="none" stroke="currentColor" stroke-width="1"/>
+          <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.37 17.03A7.52 7.52 0 1 1 15.48 10.72"/>
+            <path d="m20.93 11.07 5.32-5.32"/>
+            <path d="M19.37 5.75h6.88v6.88"/>
+          </g>
+          <g fill="currentColor">
+            <circle cx="10.61" cy="16.13" r="1.2"/>
+            <circle cx="13.47" cy="21.39" r="1"/>
+            <circle cx="16.63" cy="20.34" r="0.8"/>
+          </g>
+</svg>
+        <h2>Çerezlerinizin kontrolünü ele almaya hazır mısınız?</h2>
+        <p>Ücretsiz, açık kaynak ve tarayıcınızdan asla dışarı çıkmaz.</p>
+        <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/cookiexport/elehbdibaiglkdbcaolaehdpobghehbm" target="_blank" rel="noopener">Chrome'a Ekle — Ücretsiz</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://chromewebstore.google.com/detail/cookiexport/elehbdibaiglkdbcaolaehdpobghehbm" target="_blank" rel="noopener">Chrome Web Mağazası</a>
+      <a href="https://github.com/mtvrkan/cookiexport" target="_blank" rel="noopener">GitHub</a>
+      <a href="/tr/privacy">Gizlilik Politikası</a>
+      <a href="https://github.com/mtvrkan/cookiexport/issues" target="_blank" rel="noopener">Sorun bildir</a>
+    </div>
+    <p class="footer-credit">
+      Developed with
+      <svg class="footer-heart" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="love">
+        <path d="M12 21s-7.5-4.7-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.3-9.6 9-9.6 9z"/>
+      </svg>
+      by
+      <a href="https://mtvrkan.com" target="_blank" rel="noopener">mtvrkan</a>
+    </p>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" type="button" aria-label="Başa dön">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/>
+  </svg>
+</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Panoya kopyalandı</div>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/demo.js"></script>
+<script src="/assets/js/shots.js"></script>
+</body>
+</html>

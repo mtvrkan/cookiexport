@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CookieXport</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="cx-tile" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3B82F6"/>
+            <stop offset="1" stop-color="#22D3EE"/>
+          </linearGradient>
+        </defs>
+        <rect width="32" height="32" rx="7.52" fill="url(#cx-tile)"/>
+        <g fill="none" stroke="#fff" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.37 17.03A7.52 7.52 0 1 1 15.48 10.72"/>
+          <path d="m20.93 11.07 5.32-5.32"/>
+          <path d="M19.37 5.75h6.88v6.88"/>
+        </g>
+        <g fill="#fff">
+          <circle cx="10.61" cy="16.13" r="1.5"/>
+          <circle cx="13.47" cy="21.39" r="1.28"/>
+          <circle cx="16.63" cy="20.34" r="1.02"/>
+        </g>
+</svg>
+      <span class="logo-text">CookieXport</span>
+    </div>
+    <div class="header-actions">
+      <button id="btn-show-values" class="icon-btn" type="button" data-i18n-title="toggle_vals" data-i18n-aria="toggle_vals">
+        <svg id="ico-eye-off" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+          <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+          <line x1="1" y1="1" x2="23" y2="23"/>
+        </svg>
+        <svg id="ico-eye" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </button>
+      <button id="btn-theme" class="icon-btn" type="button" data-i18n-title="a11y_theme" data-i18n-aria="a11y_theme">
+        <svg id="ico-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="ico-sun"  width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+      </button>
+      <a href="options.html" target="_blank" class="icon-btn" data-i18n-title="s_settings" data-i18n-aria="s_settings">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- TABS -->
+  <nav class="tabs">
+    <button class="tab active" data-tab="export" data-i18n="tab_export">Export</button>
+    <button class="tab" data-tab="multi"  data-i18n="tab_multi">Multi-Domain</button>
+    <button class="tab" data-tab="history" data-i18n="tab_history">History</button>
+    <button class="tab" data-tab="import" data-i18n="tab_import">Import</button>
+  </nav>
+
+  <!-- ═══════════════════════════════ EXPORT TAB ══ -->
+  <div id="tab-export" class="tab-content active">
+
+    <!-- Domain bar -->
+    <div class="domain-bar">
+      <div class="domain-left">
+        <img id="favicon" class="favicon" src="" alt="" width="16" height="16">
+        <span id="domain-display" class="domain-name">—</span>
+      </div>
+      <div class="domain-right">
+        <label class="subdomain-toggle">
+          <input type="checkbox" id="chk-subdomains" checked>
+          <span data-i18n="subdomains">Subdomains</span>
+        </label>
+        <button id="btn-custom" class="link-btn" data-i18n="custom">Custom</button>
+      </div>
+    </div>
+
+    <div id="custom-panel" class="custom-panel hidden">
+      <input id="custom-input" class="custom-input" type="text" data-i18n-ph="custom_ph" placeholder="e.g. youtube.com">
+      <button id="btn-apply-custom" class="btn-primary sm" data-i18n="apply">Apply</button>
+    </div>
+
+    <!-- Quick presets -->
+    <div class="presets-bar">
+      <span class="presets-label" data-i18n="quick_label">Quick:</span>
+      <button class="scroll-arrow" id="preset-prev" type="button" data-i18n-aria="a11y_prev" disabled>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="presets-scroll" id="presets-scroll">
+        <button class="preset" data-domain="youtube.com">YouTube</button>
+        <button class="preset" data-domain="twitch.tv">Twitch</button>
+        <button class="preset" data-domain="netflix.com">Netflix</button>
+        <button class="preset" data-domain="twitter.com">X/Twitter</button>
+        <button class="preset" data-domain="reddit.com">Reddit</button>
+        <button class="preset" data-domain="instagram.com">Instagram</button>
+        <button class="preset" data-domain="github.com">GitHub</button>
+        <button class="preset" data-domain="discord.com">Discord</button>
+        <button class="preset" data-domain="spotify.com">Spotify</button>
+        <button class="preset" data-domain="amazon.com">Amazon</button>
+        <button class="preset" data-domain="tiktok.com">TikTok</button>
+        <button class="preset" data-domain="linkedin.com">LinkedIn</button>
+        <button class="preset" data-domain="facebook.com">Facebook</button>
+        <button class="preset" data-domain="google.com">Google</button>
+        <button class="preset" data-domain="openai.com">OpenAI</button>
+        <button class="preset" data-domain="steampowered.com">Steam</button>
+        <button class="preset" data-domain="patreon.com">Patreon</button>
+        <button class="preset" data-domain="crunchyroll.com">Crunchyroll</button>
+        <button class="preset" data-domain="pixiv.net">Pixiv</button>
+        <button class="preset" data-domain="primevideo.com">Prime Video</button>
+        <button class="preset" data-domain="disneyplus.com">Disney+</button>
+        <button class="preset" data-domain="huggingface.co">HuggingFace</button>
+      </div>
+      <button class="scroll-arrow" id="preset-next" type="button" data-i18n-aria="a11y_next">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Tool presets -->
+    <div class="tool-bar">
+      <span class="presets-label" data-i18n="tool_label">Tool:</span>
+      <button class="scroll-arrow" id="tool-prev" type="button" data-i18n-aria="a11y_prev">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="tools-scroll" id="tools-scroll">
+
+        <button class="tool active" data-format="curl">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="1" width="12" height="12" rx="2.5"/>
+            <path d="M4 5.5L6.5 7 4 8.5"/><line x1="7.5" y1="8.5" x2="10" y2="8.5"/>
+          </svg>
+          cURL
+        </button>
+
+        <button class="tool" data-format="python">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 1C5.2 1 4 2 4 3.5V5h3v.5H3.5C2.4 5.5 1 6.5 1 8c0 1.8 1.2 2.5 2.5 2.5H5V9H4c-.5 0-.8-.3-.8-.8s.3-.7.8-.7H7.5C9.2 7.5 10 6.2 10 4.5V3.5C10 2 8.8 1 7 1z"/>
+            <circle cx="5.5" cy="2.8" r=".6" fill="currentColor" stroke="none"/>
+            <path d="M7 13c1.8 0 3-1 3-2.5V9H7v-.5h3.5c1.1 0 2.5-1 2.5-2.5 0-1.8-1.2-2.5-2.5-2.5H9V5h1c.5 0 .8.3.8.8s-.3.7-.8.7H6.5C4.8 6.5 4 7.8 4 9.5v1C4 12 5.2 13 7 13z"/>
+            <circle cx="8.5" cy="11.2" r=".6" fill="currentColor" stroke="none"/>
+          </svg>
+          Python
+        </button>
+
+        <button class="tool" data-format="node">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 1.5L12 4.5v5L7 12.5 2 9.5v-5z"/>
+          </svg>
+          Node.js
+        </button>
+
+        <button class="tool" data-format="playwright">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="7" cy="4" r="2.5"/>
+            <path d="M2 12.5c0-2.76 2.24-5 5-5s5 2.24 5 5"/>
+          </svg>
+          Playwright
+        </button>
+
+        <button class="tool" data-format="puppeteer">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="4" width="9" height="7" rx="2"/>
+            <path d="M5 4V2.5a2 2 0 0 1 4 0V4"/>
+            <circle cx="5" cy="7.5" r=".8" fill="currentColor" stroke="none"/>
+            <circle cx="9" cy="7.5" r=".8" fill="currentColor" stroke="none"/>
+          </svg>
+          Puppeteer
+        </button>
+
+        <button class="tool" data-format="selenium">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <circle cx="7" cy="7" r="5.5"/>
+            <path d="M7 1.5C5.5 3.5 5.5 10.5 7 12.5M7 1.5C8.5 3.5 8.5 10.5 7 12.5"/>
+            <line x1="1.5" y1="7" x2="12.5" y2="7"/>
+          </svg>
+          Selenium
+        </button>
+
+        <button class="tool" data-format="json">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 2L2 7l3 5M9 2l3 5-3 5"/>
+          </svg>
+          JSON
+        </button>
+
+        <button class="tool" data-format="header">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <line x1="2" y1="4" x2="12" y2="4"/>
+            <line x1="2" y1="7" x2="12" y2="7"/>
+            <line x1="2" y1="10" x2="8" y2="10"/>
+          </svg>
+          Header
+        </button>
+
+        <button class="tool" data-format="php">
+          <span class="te">🐘</span>
+          PHP
+        </button>
+
+        <button class="tool" data-format="go">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="7" cy="7" r="5.5"/>
+            <path d="M9 6H7v2h2"/>
+          </svg>
+          Go
+        </button>
+
+        <button class="tool" data-format="netscape">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 2v7M4.5 6.5L7 9l2.5-2.5"/>
+            <path d="M2 11h10"/>
+          </svg>
+          Netscape
+        </button>
+
+        <button class="tool" data-format="har">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 1H3.5A1.5 1.5 0 0 0 2 2.5v9A1.5 1.5 0 0 0 3.5 13h7A1.5 1.5 0 0 0 12 11.5V5z"/>
+            <path d="M8 1v4h4"/>
+            <line x1="4.5" y1="8" x2="9.5" y2="8"/>
+            <line x1="4.5" y1="10.5" x2="7.5" y2="10.5"/>
+          </svg>
+          HAR
+        </button>
+
+        <button class="tool" data-format="base64">
+          <svg class="ti" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="6" width="8" height="6" rx="1.5"/>
+            <path d="M5 6V4.5a2 2 0 0 1 4 0V6"/>
+            <circle cx="7" cy="9" r=".9" fill="currentColor" stroke="none"/>
+          </svg>
+          Base64
+        </button>
+
+        <button class="tool" data-format="custom">
+          <svg class="ti" viewBox="0 0 14 14" fill="currentColor">
+            <path d="M7 1l1.2 3.7H12L9 6.9l1.2 3.7L7 8.4l-3.2 2.2L5 6.9 2 4.7h3.8z"/>
+          </svg>
+          Custom
+        </button>
+
+      </div>
+      <button class="scroll-arrow" id="tool-next" type="button" data-i18n-aria="a11y_next">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Search -->
+    <div class="search-wrap">
+      <svg class="search-ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="search" class="search-input" type="text" data-i18n-ph="search_ph" data-i18n-aria="search_ph">
+      <button id="btn-clear-search" class="clear-btn hidden" type="button" data-i18n-aria="a11y_clear">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Filter chips -->
+    <div class="filters">
+      <button class="chip active" data-filter="all"      data-i18n="f_all">All</button>
+      <button class="chip" data-filter="session"  data-i18n="f_session">Session</button>
+      <button class="chip" data-filter="secure"   data-i18n="f_secure">Secure</button>
+      <button class="chip" data-filter="httponly" data-i18n="f_httponly">HttpOnly</button>
+      <button class="chip" data-filter="expiring" data-i18n="f_expiring">Expiring</button>
+    </div>
+
+    <!-- Cookie list -->
+    <div id="cookie-list" class="cookie-list">
+      <div class="state-box" id="state-loading">
+        <div class="spinner"></div>
+        <span data-i18n="loading">Loading…</span>
+      </div>
+      <div class="state-box hidden" id="state-empty">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        <p data-i18n="no_cookies">No cookies found</p>
+        <span data-i18n="empty_hint">Try a different domain or filter</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="selection-row">
+        <label class="select-all-label">
+          <input type="checkbox" id="chk-select-all">
+          <span id="lbl-selected">0 <span data-i18n="n_selected">selected</span></span>
+        </label>
+        <span id="lbl-total" class="total-count"></span>
+      </div>
+      <div class="export-row">
+        <button id="btn-copy" class="btn-secondary" data-i18n-title="btn_copy">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span data-i18n="btn_copy">Copy</span>
+        </button>
+        <button id="btn-download" class="btn-primary">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-i18n="btn_download">Download</span>
+        </button>
+      </div>
+    </div>
+
+  </div><!-- /export tab -->
+
+  <!-- ═══════════════════════════════ MULTI TAB ═══ -->
+  <div id="tab-multi" class="tab-content hidden">
+    <div class="multi-search-wrap">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="multi-search" class="search-input" type="text" data-i18n-ph="multi_search" data-i18n-aria="multi_search">
+    </div>
+    <div id="multi-list" class="multi-list">
+      <div class="state-box" id="multi-loading"><div class="spinner"></div></div>
+    </div>
+    <div class="footer single-row">
+      <button id="btn-multi-export" class="btn-primary full" data-i18n="multi_export">Export Selected Domains</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ HISTORY TAB ═ -->
+  <div id="tab-history" class="tab-content hidden">
+    <div class="hist-header">
+      <span class="section-label" data-i18n="tab_history">History</span>
+      <button id="btn-clear-hist" class="link-btn danger" data-i18n="clear_hist">Clear all</button>
+    </div>
+    <div id="hist-list" class="hist-list">
+      <div class="state-box" id="hist-empty">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <p data-i18n="hist_empty">No export history yet</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ IMPORT TAB ══ -->
+  <div id="tab-import" class="tab-content hidden">
+    <div id="drop-zone" class="drop-zone">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      <p data-i18n="imp_drop">Drop cookies.txt or .json here</p>
+      <span data-i18n="imp_browse">or click to browse</span>
+      <input type="file" id="file-input" accept=".txt,.json" style="display:none">
+    </div>
+    <div id="import-preview" class="import-preview hidden">
+      <div class="preview-info">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <span id="preview-text"></span>
+      </div>
+      <label class="subdomain-toggle" style="padding: 0 14px 10px">
+        <input type="checkbox" id="chk-import-expired">
+        <span data-i18n="imp_expired">Include expired cookies</span>
+      </label>
+      <div class="footer single-row">
+        <button id="btn-import-apply" class="btn-primary full" data-i18n="imp_apply">Apply to browser</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /app -->
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="i18n.js"></script>
+<script src="formatter.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

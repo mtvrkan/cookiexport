@@ -1,0 +1,5 @@
+{
+  "extName": { "message": "CookieXport" },
+  "extDescription": { "message": "Export cookies from the site you're on — save as a file or copy to your clipboard. Runs fully offline, no account needed." },
+  "ctxExport": { "message": "Export cookies for this site — CookieXport" }
+}

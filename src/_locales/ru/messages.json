@@ -1,0 +1,5 @@
+{
+  "extName": { "message": "CookieXport" },
+  "extDescription": { "message": "Сохраняйте cookie текущего сайта в файл или копируйте в буфер обмена. Работает офлайн, без регистрации." },
+  "ctxExport": { "message": "Экспортировать cookie этого сайта — CookieXport" }
+}

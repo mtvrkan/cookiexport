@@ -1,0 +1,5 @@
+{
+  "extName": { "message": "CookieXport" },
+  "extDescription": { "message": "現在のサイトのCookieをファイルに保存、またはクリップボードにコピーできます。完全オフラインで動作し、アカウント不要です。" },
+  "ctxExport": { "message": "このサイトのCookieをエクスポート — CookieXport" }
+}

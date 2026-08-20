@@ -1,0 +1,5 @@
+{
+  "extName": { "message": "CookieXport" },
+  "extDescription": { "message": "将当前网站的 Cookie 保存为文件或复制到剪贴板。完全离线运行，无需注册账号。" },
+  "ctxExport": { "message": "导出此网站的Cookie — CookieXport" }
+}

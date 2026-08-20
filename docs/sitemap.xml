@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://cookiexport.mtvrkan.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookiexport.mtvrkan.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://cookiexport.mtvrkan.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cookiexport.mtvrkan.com/"/>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cookiexport.mtvrkan.com/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookiexport.mtvrkan.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://cookiexport.mtvrkan.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cookiexport.mtvrkan.com/"/>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cookiexport.mtvrkan.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookiexport.mtvrkan.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://cookiexport.mtvrkan.com/tr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cookiexport.mtvrkan.com/privacy"/>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cookiexport.mtvrkan.com/tr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cookiexport.mtvrkan.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://cookiexport.mtvrkan.com/tr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cookiexport.mtvrkan.com/privacy"/>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
